@@ -1,0 +1,239 @@
+{
+  "swagger": "2.0",
+  "host": "localhost:5000/",
+  "schemes": ["http"],
+  "paths": {
+    "/ping": {
+      "get": {
+        "summary": "Ping home",
+        "description": "Ping home",
+        "operationId": "ping",
+        "produces": ["application/text"],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "400": {
+            "description": "Invalid status value"
+          }
+        }
+      }
+    },
+    "/getSalesSummery": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "parameters": [
+          {
+            "name": "adminType",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "1"
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "2021-06-09"
+          },
+          {
+            "name": "userType",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "2"
+          },
+          {
+            "name": "userId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "91e51feb-3d97-413f-ae23-97ade1acdb0e"
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "2021-06-05"
+          },
+          {
+            "name": "ticketName",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "MANIPUR6"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/loginUser": {
+      "get": {
+        "description": "Login an user",
+        "parameters": [
+          {
+            "name": "userName",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "1"
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "2021-06-09"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector",
+            "content": {
+              "application/json; charset=utf-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ticketEntry": {
+      "post": {
+        "summary": "ticketEntry",
+        "operationId": "ticketEntry",
+        "deprecated": false,
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "name": "agentId",
+            "in": "formData",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "stockistId",
+            "in": "formData",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "subStockistId",
+            "in": "formData",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "enteredBy",
+            "in": "formData",
+            "required": true,
+            "type": "integer",
+            "format": "int32"
+          },
+          {
+            "name": "ticketName",
+            "in": "formData",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tickets",
+            "in": "formData",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "stockistScheme",
+            "in": "formData",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "subStockistScheme",
+            "in": "formData",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "agentScheme",
+            "in": "formData",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object"
+            },
+            "headers": {}
+          }
+        }
+      }
+    }
+  }
+}
